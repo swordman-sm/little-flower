@@ -27,6 +27,7 @@ public class VmController {
     public Result<List<Vm>> getLocalJvmProcessList(){
         try {
             List<Vm> jvms = vmService.getLocalJvm();
+            System.err.println(jvms);
             return Result.success(jvms);
         }catch (Exception e){
             return Result.fail(e.getMessage());
